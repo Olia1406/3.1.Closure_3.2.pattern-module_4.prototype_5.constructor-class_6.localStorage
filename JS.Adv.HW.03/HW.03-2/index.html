@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+    <div class="container">
+        <div class="box1">
+            <label for="box1-inp1">Баланс</label>
+            <input type="text" id="box1-inp1" disabled value="1000">
+
+            <label for="box1-inp2">Коктейль</label>
+            <input type="text" id="box1-inp2" disabled value="100">
+
+            <label for="box1-inp3">Фреш</label>
+            <input type="text" id="box1-inp3" disabled value="50">
+
+            <label for="box1-inp4">Вода</label>
+            <input type="text" id="box1-inp4" disabled value="200">
+        </div>
+        <div class="box2">
+
+            <label for="box2-inp5">Кількість</label>
+            <input type="text" id="box2-inp5" value="">
+
+            <div class=" row">
+                <input type="radio" name="rad" value="Коктейль" id="box2-inp6">
+                <label for="box2-inp6">Коктейль</label>
+
+                <input type="radio" name="rad" value="Фреш" id="box2-inp7">
+                <label for="box2-inp6">Фреш</label>
+
+                <input type="radio" name="rad" value="Вода" id="box2-inp8">
+                <label for="box2-inp6">Вода</label>
+            </div>
+            <button type="button" class="add" id="add">Додати</button>
+            <textarea name="" id="area" cols="30" rows="7" disabled></textarea>
+            <button type="button" class="buy" id="buy">Купити</button>
+        </div>
+        <textarea class="box3" id="box3" disabled>
+        </textarea>
+    </div>
+ <!-- модальне вікно -->
+    <div id="myModal" class="modal hide">
+        <div class="modal-content">
+            <div class="modal-header">
+            <span class="close" id="close">&times;</span>
+            </div>
+            <hr>
+            <div class="message">
+                <p class="mes" id="modal-mes">Вибачте, у нас немає...</p>
+            </div>
+            <hr>
+            <div class="modal-footer">
+                <button type="button" class="btn-close" id="btn-close">Close</button>
+            </div>
+        </div>
+
+    </div>
+    <script src="module.js" type="module"></script>
+    <script src="script.js" type="module"></script>
+</body>
+
+</html>
