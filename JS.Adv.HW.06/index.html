@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v2.1.9/css/unicons.css">
+</head>
+
+<body style="overflow: hidden; background-color: rgb(238, 227, 227)">
+    <!-- перша секція з формою для реєстрації ----------------------------------------->
+    <section id="section1">
+        <div class="container1">
+            <p class="title">Please sign up</p>
+            <form class="form" name="form1">
+                <!-- форма для вводу даних -->
+                <div class="form-elements-container">
+                    <div class="form-item">
+                        <input type="text" class="form-input input1" required>
+                        <label class="form-label">First Name</label>
+                    </div>
+                    <!-- іконки, що з'являються при валідації -->
+                    <i class="cross uil uil-times"></i>
+                    <i class="good uil uil-check"></i>
+                    <!-- повідомлення, що з'являється при перевірці валідності -->
+                    <div class="message">Please provide a valid First name</div>
+
+                    <div class="form-item">
+                        <input type="text" class="form-input input1" required>
+                        <label class="form-label">Last Name</label>
+                    </div>
+                    <i class="cross uil uil-times"></i>
+                    <i class="good uil uil-check"></i>
+                    <div class="message">Please provide a valid Last Name</div>
+
+                    <div class="form-item">
+                        <input type="text" class="form-input input1" required>
+                        <label class="form-label">Email address</label>
+                    </div>
+                    <i class="cross uil uil-times"></i>
+                    <i class="good uil uil-check"></i>
+                    <div class="message">Please provide a valid Email address</div>
+                    <!-- <div class="message3">This email alredy exist</div> -->
+
+                    <div class="form-item">
+                        <input type="password" class="form-input input1" required>
+                        <label class="form-label">Password</label>
+                    </div>
+                    <i class="cross uil uil-times"></i>
+                    <i class="good uil uil-check"></i>
+                    <div class="message">Please provide a valid Password</div>
+                    <!-- кнопка, для підтвердження даних і відправлення їх в Storage -->
+                    <button type="button" onclick="checkData()">Sign Up</button>
+                    <!-- посилання на другу секцію -->
+                    <a href="#section2" id="SignInNow">Sign in now</a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- --------------------------------------------------------------------------- -->
+    <!-- друга секція з формою для входу ---------------------------------------------->
+    <section id="section2">
+        <div class="container2">
+            <p class="title">Please sign in</p>
+            <form class="form" name="form2">
+                <!-- форма для логінування -->
+                <div class="form-elements-container">
+
+                    <div class="form-item">
+                        <input type="text" class="form-input section2-inp1" required>
+                        <label class="form-label">Email address</label>
+                    </div>
+
+                    <div class="form-item">
+                        <input type="password" class="form-input section2-inp2" required>
+                        <label class="form-label">Password</label>
+                    </div>
+                    <!-- повідомлення, що з'являється, коли в Storage немає таких даних, або він пустий -->
+                    <div class="message2" style="margin-top: -28px;">Incorrect email or password</div>
+                    <!-- кнопка для входу -->
+                    <button type="button" onclick="compareWithStorage()" style="background-color: rgb(70, 160, 82);border-color: rgb(61, 138, 61);">Sign In</button>
+                    <a href="#section1" id="SignUpNow" onclick="hideSignInMess()">Sign up now</a>
+
+                </div>
+            </form>
+        </div>
+    </section>
+    <!-- --------------------------------------------------------------------------- -->
+    <!-- третя секція з профілем ------------------------------------------------------>
+    <section id="section3" style="display: none;">
+        <div class="container3">
+            <div class="profile">
+                <div class="avatar"></div>
+                <p class="name">firstName secondName</p>
+                <p class="email">email</p>
+                <p class="direction">Designer & Web Developing</p>
+                <!-- просто коротка горизонтальна лыныя -->
+                <div style="width: 70px; height: 0px; border: 1px solid rgb(180, 177, 177);"></div>
+            </div>
+            <!-- посилання, всередині якого є кнопка signOut(яка нічого не робить, все робить посилання) -->
+            <a href="#section1" id="SignOutNow" onclick="signOut()" style="width: 100%;"><button type="button"
+                    style="background-color: rgb(70, 160, 82);border-color: rgb(61, 138, 61); margin-bottom: -5px;">Sign
+                    Out</button></a>
+        </div>
+    </section>
+    <!-- --------------------------------------------------------------------------- -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
